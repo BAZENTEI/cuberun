@@ -157,10 +157,15 @@ public class PlayerController : MonoBehaviour {
 		if(b){
 			yield return new WaitForSeconds(0.5f);
 		}
-		m_CameraFollow.isFollow = false;
-		Debug.Log("gameover");
-		life = false;
-		SaveData();
+
+		if(life){
+			m_CameraFollow.isFollow = false;
+			Debug.Log("gameover");
+			life = false;
+			SaveData();
+			StartCoroutine("ResetGame");
+		}
+		
 		
 	}
 

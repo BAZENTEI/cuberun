@@ -35,12 +35,6 @@ public class UIManager : MonoBehaviour {
         m_PlayButton = GameObject.Find("play_btn");
         UIEventListener.Get(m_PlayButton).onClick = PlayButtonClick;
 
-        m_Left = GameObject.Find("Left");
-        UIEventListener.Get(m_Left).onClick = Left;
-
-        m_Right = GameObject.Find("Right");
-        UIEventListener.Get(m_Right).onClick = Right;
-
         Init();
 
         m_GameUI.SetActive(false);
